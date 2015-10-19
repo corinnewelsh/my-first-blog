@@ -7,21 +7,14 @@
             <h1><a href="">Corinne's blog</a></h1>
         </div>
 
-        <div>
-            <p>published: some random date and time</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Here's a whole load of paragraph stuff!!!</p>
-        </div>
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text | linebreaks }}</p>
+            </div>
+        {% endfor %}
 
-        <div>
-            <p>published: some second random date and time</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Here's another whole load of paragraph stuff.</p>
-        </div>
 
-        <div>
-           <p>Hi there!</p>
-           <p>It works!</p>
-        </div>
     </body>
 </html>
