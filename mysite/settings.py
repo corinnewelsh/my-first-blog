@@ -102,3 +102,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
+# Login added by me during the extended parts of the tutorial
+
+LOGIN_REDIRECT_URL = '/'
